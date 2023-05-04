@@ -1,4 +1,4 @@
-#basic
+#basic for loop that counts from 0 to 150
 for i in range(151):
   print(i)
 #multiples of 5
