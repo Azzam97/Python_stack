@@ -29,13 +29,14 @@ print("function5")
 def a():
     print(5)
 x = a()
-print(x) # 5, none
+print(x) # 5, note: returns a none value because theres nothing to print as a return from the function
 
 #6
 print("function6")
 def a(b,c):
     print(b+c)
-print(a(1,2) + a(2,3)) # 3,5,none
+    return b+c
+print(a(1,2) + a(2,3)) # 3,5,note: the function gets an error if there is no return value
 
 #7
 print("function7")
@@ -83,7 +84,7 @@ def a():
     print(b)
 print(b)
 a()
-print(b) # 500,500,300,500
+print(b) # 500,500,300,500 note: global and local variables can have the same name and the global does not get reassigned because of the function
 
 #12
 print("function12")
@@ -95,7 +96,7 @@ def a():
     return b
 print(b)
 a()
-print(b) #500,500,300,500
+print(b) #500,500,300,500 note: global and local variables can have the same name and the global does not get reassigned because of the function
 
 #13
 print("function13")
