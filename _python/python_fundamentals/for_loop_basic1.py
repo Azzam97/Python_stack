@@ -14,7 +14,7 @@ for i in range(1,101):
     print(i)
 #whoa, that sucker's huge
 sum = 0
-for i in range(500000):
+for i in range(500001):
   if i%2 != 0:
     sum +=i
 print(sum)
