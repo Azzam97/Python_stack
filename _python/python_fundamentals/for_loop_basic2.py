@@ -105,11 +105,23 @@ numbers = [37,2,1,-9]
 numbers.reverse()
 print(numbers)
 
-def reverse():
+def reverse1():
     numbers = [37,2,1,-9]
     for i in range (len(numbers)):
         if i<(len(numbers)/2):
             numbers[i], numbers[len(numbers)-i-1] = numbers[len(numbers)-i-1], numbers[i]
     return numbers
-f = reverse()
+f = reverse1()
 print(f)
+
+def reverse2():
+    numbers = [37,2,1,-9]
+    temp = 0
+    for i in range (len(numbers)):
+        if i<(len(numbers)/2):
+            temp = numbers[len(numbers)-i-1]
+            numbers[len(numbers)-i-1] = numbers[i]
+            numbers[i] = temp
+    return numbers
+g = reverse2()
+print(g)
