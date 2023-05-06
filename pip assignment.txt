@@ -1,0 +1,18 @@
+pip list command: gives the version in use and if there is any new releases to upgrade and shows the command to use in order to upgrade.
+
+deactivate command: will cause the virtual environment to be deactivated.
+
+pip3 list command: only showed the available new releases to be installed and how to update and install said new releases.
+
+call myEnvironments/py3Env/Scripts/activate command: activates the virtual environments to be used.
+
+pip install Django==2.2.4 command: downloaded and installed the django 2.2.4 package to the virtual environments and showed the
+available new releases.
+
+pip freeze command: only shows the installed packages and not the pip or setuptools installed as with the list command.
+
+pip freeze > requirements.txt command: this command creates a text file that shows the installed packages in the environment.
+
+pip uninstall Django command: uninstalls the django package that was istalled previously.
+
+pip show django: if django is unintalled gives package not found, if the package is intalled will show information about the package installed.
