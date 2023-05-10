@@ -26,4 +26,3 @@ class BankAccount:
 Azzam = user("Azzam Khames","Azzam.ahmad97@gmail.com")
 Azzam.account.deposit(100)
 print(Azzam.account.balance)
-print(Azzam.account)
