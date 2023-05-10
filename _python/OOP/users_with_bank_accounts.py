@@ -3,13 +3,14 @@ class user:
         self.name = name
         self.email = email_address
         self.account = BankAccount(int_rate=0.02,balance=0)
+    def make_deposit(self):
+        self.balance.deposit
 
 
 class BankAccount:
-    def __init__(self, int_rate=0.02, balance=0): # don't forget to add some default values for these parameters!
+    def __init__(self, int_rate=0.02, balance=0):
         self.int_rate = int_rate
         self.balance = balance
-        # don't worry about user info here; we'll involve the User class soon
     def deposit(self, amount):
         self.balance += amount
         return self
