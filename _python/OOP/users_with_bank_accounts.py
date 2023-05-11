@@ -3,8 +3,6 @@ class user:
         self.name = name
         self.email = email_address
         self.account = BankAccount(int_rate=0.02,balance=0)
-    def make_deposit(self):
-        self.balance.deposit
 
 
 class BankAccount:
