@@ -101,21 +101,19 @@ e = analysis()
 print(e)
 
 # a function that reverses a list
-numbers = [37,2,1,-9]
+numbers = [37,2]
 numbers.reverse()
 print(numbers)
 
-def reverse1():
-    numbers = [37,2,1,-9]
+def reverse1(numbers):
     for i in range (len(numbers)):
         if i<(len(numbers)/2):
             numbers[i], numbers[len(numbers)-i-1] = numbers[len(numbers)-i-1], numbers[i]
     return numbers
-f = reverse1()
+f = reverse1(numbers)
 print(f)
 
-def reverse2():
-    numbers = [37,2,1,-9]
+def reverse2(numbers):
     temp = 0
     for i in range (len(numbers)):
         if i<(len(numbers)/2):
@@ -123,5 +121,5 @@ def reverse2():
             numbers[len(numbers)-i-1] = numbers[i]
             numbers[i] = temp
     return numbers
-g = reverse2()
+g = reverse2(numbers)
 print(g)
