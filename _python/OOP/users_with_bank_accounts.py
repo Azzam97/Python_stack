@@ -38,10 +38,8 @@ class BankAccount:
         self.interest_yield = (self.int_rate * self.balance) + self.balance
         return self
 
-saving_account = BankAccount(0.02,1000)
-current_account = BankAccount(0,600)
+my_account = BankAccount(0.02,1000)
 azzam = User("Azzam Khames","Azzam.ahmad97@gmail.com")
-azzam.account = saving_account
+azzam.account = my_account
 azzam.make_deposit(100).display_user_balance()
-azzam.account = current_account
 azzam.make_withdrawal(300).display_user_balance()
