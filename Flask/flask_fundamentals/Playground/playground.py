@@ -1,3 +1,7 @@
+"""
+    this program runs an app to give me a diffirent number of boxes based on the route used
+"""
+
 from flask import Flask, render_template
 app = Flask(__name__)
 
