@@ -7,17 +7,17 @@ app = Flask(__name__)
 
 @app.route('/play')
 def level_1():
-    return render_template('index.html')
+    return render_template('index.html', number = 3, colour = 'aqua')
 
 @app.route('/play/<int:num>')
 def level_2(num):
     x = num
-    return render_template('index_number.html', number = x)
+    return render_template('index.html', number = x, colour = 'aqua')
 
 @app.route('/play/<int:num>/<color>')
 def level_3(num , color):
     x = num
-    return render_template('index_number_color.html', number = x, colour = color)
+    return render_template('index.html', number = x, colour = color)
 
 if __name__=="__main__":
     app.run(debug=True)
