@@ -4,8 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <title>Great Number Game</title>
+    <style>
+        .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+       .result {
+        margin-bottom: 50px;
+        border: 2px black solid;
+        background-color: {{color}};
+       }
+    </style>
   </head>
   <body>
     <div  class="container">
@@ -15,7 +26,7 @@
         <p>Take a guess</p>
       </div>
 
-      <div class="result" style="margin-bottom: 50px; border: 2px black solid; background-color: {{color}};"">
+      <div class="result">
         <p>{{text}}</p>
       </div>
 

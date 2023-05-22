@@ -6,15 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='my_style.css') }}">
     <title>checkerboard with variable vertical and horizental axis</title>
+    <style>
+        .white-box{
+            background-color: {{colour1}}
+        }
+
+        .black-box{
+            background-color: {{colour2}}
+        }
+    </style>
 </head>
 <body>
     <div class="checkerboard">
         {% for i in range (row) %} <!--this loop for the horizental line-->
             {% for j in range (line) %} <!--this loop for the vertical line-->
                 {% if (i + j)%2 ==0 %}
-                    <p class="white-box" style="background-color: {{colour1}};"></p>
+                    <p class="white-box"></p>
                 {% else %}
-                    <p class="black-box" style="background-color: {{colour2}};"></p>
+                    <p class="black-box"></p>
                 {% endif %}
             {% endfor %}
             <br>
