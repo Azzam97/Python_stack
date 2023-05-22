@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+  </head>
+  <body>
+    <form action="/destroy_session" method="post">
+      <h1>Counter</h1>
+      <h3>{{count}} times.</h3>
+
+      <button>destroy</button>
+    </form>
+    <form action="/plus_two" method="post">
+      <button>+2</button>
+    </form>
+    <form action="/reset" method="post">
+        <button> Reset </button>
+    </form>
+    <form action="/increment" method="post">
+        <label for="increment">How much do you want to increase?</label>
+        <input type="number" name="increment" id="increment">
+        <button> GO </button>
+    </form>
+    <p>times the page visited: {{users}}</p>
+  </body>
+</html>
