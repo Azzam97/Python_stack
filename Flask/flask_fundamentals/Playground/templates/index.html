@@ -18,16 +18,16 @@
         border-style: solid;
         background-color: {{colour}};
       }
-
     </style>
   </head>
   <body>
-    <h3 style="text-align: center">Welcome!</h3>
-
-    <div class="container">
+    <main>
+      <h3 style="text-align: center">Welcome!</h3>
+      <div class="container">
         {% for x in range (0,number) %}
-            <div class="loop"></div>
+          <div class="loop"></div>
         {% endfor %}
-    </div>
+      </div>
+    </main>
   </body>
 </html>

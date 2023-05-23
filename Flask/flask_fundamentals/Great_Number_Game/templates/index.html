@@ -6,37 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Great Number Game</title>
     <style>
-        .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    }
-       .result {
-        margin-bottom: 50px;
-        border: 2px black solid;
-        background-color: {{color}};
-       }
+          .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      }
+         .result {
+          margin-bottom: 50px;
+          border: 2px black solid;
+          background-color: {{color}};
+         }
     </style>
   </head>
   <body>
-    <div  class="container">
-      <div>
-        <h1>Welcome to the great number game</h1>
-        <p>I'm thinking of a number between 1 and 100</p>
-        <p>Take a guess</p>
-      </div>
+    <main>
+      <div class="container">
+        <div>
+          <h1>Welcome to the great number game</h1>
+          <p>I'm thinking of a number between 1 and 100</p>
+          <p>Take a guess</p>
+        </div>
 
-      <div class="result">
-        <p>{{text}}</p>
-      </div>
+        <div class="result">
+          <p>{{text}}</p>
+        </div>
 
-      <div>
-        <form action="/result" method="post">
-          <label for="guess">Your guess</label>
-          <input type="number" name="guess" id="guess" />
-          <button>Submit</button>
-        </form>
+        <div>
+          <form action="/result" method="post">
+            <label for="guess">Your guess</label>
+            <input type="number" name="guess" id="guess" />
+            <button>Submit</button>
+          </form>
+        </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>

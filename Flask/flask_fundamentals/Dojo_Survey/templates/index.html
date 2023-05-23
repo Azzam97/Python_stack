@@ -11,52 +11,59 @@
     <title>Dojo Form</title>
   </head>
   <body>
-    <div class="container mt-3">
-      <form action='/result' method="post">
-        <div class="mb-3">
-          <label for="your-name" class="form-label">Your name:</label>
-          <input type="text" name="your-name" class="form-control" required />
-        </div>
-        <div class="mb-3">
-          <label for="location" class="form-label">Dojo Location:</label>
-          <select name="location" class="form-select" required>
-            <option value="Ramallah">Ramallah</option>
-            <option value="Nablus">Nablus</option>
-            <option value="Gaza">Gaza</option>
-            <option value="Hebron">Hebron</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label for="language" class="form-label">Favourite Language</label>
-          <select name="language" class="form-select" required>
-            <option value="Python">Python</option>
-            <option value="PHP">PHP</option>
-            <option value="C">C</option>
-            <option value="C#">C#</option>
-          </select>
-        </div>
-        <div>
-            <p>Please choose your gender: </p>
-            <input type="radio" name="gender" id="male" value="male">
+    <main>
+      <div class="container mt-3">
+        <form action="/result" method="post">
+          <div class="mb-3">
+            <label for="your-name" class="form-label">Your name:</label>
+            <input type="text" name="your-name" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label for="location" class="form-label">Dojo Location:</label>
+            <select name="location" class="form-select" required>
+              <option value="Ramallah">Ramallah</option>
+              <option value="Nablus">Nablus</option>
+              <option value="Gaza">Gaza</option>
+              <option value="Hebron">Hebron</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="language" class="form-label">Favourite Language</label>
+            <select name="language" class="form-select" required>
+              <option value="Python">Python</option>
+              <option value="PHP">PHP</option>
+              <option value="C">C</option>
+              <option value="C#">C#</option>
+            </select>
+          </div>
+          <div>
+            <p>Please choose your gender:</p>
+            <input type="radio" name="gender" id="male" value="male" />
             <label for="gender">male</label>
-            <input type="radio" name="gender" id="female" value="female">
+            <input type="radio" name="gender" id="female" value="female" />
             <label for="gender">female</label>
-        </div>
-        <div>
+          </div>
+          <div>
             <p>What do you enjoy the most?</p>
-            <input type="checkbox" name="hobby" id="anime" value="anime">
+            <input type="checkbox" name="hobby" id="anime" value="anime" />
             <label for="hobby1">Anime</label>
-            <input type="checkbox" name="hobby" id="games" value="games">
+            <input type="checkbox" name="hobby" id="games" value="games" />
             <label for="hobby2">Games</label>
-            <input type="checkbox" name="hobby" id="manga" value="manga">
+            <input type="checkbox" name="hobby" id="manga" value="manga" />
             <label for="hobby3">Manga</label>
-        </div>
-        <div class="mb-3">
-          <label for="comment" class="form-label">comment (optional)</label>
-          <textarea name="comment" cols="30" rows="3" class="form-control"></textarea>
-        </div>
-        <input type="submit" />
-      </form>
-    </div>
+          </div>
+          <div class="mb-3">
+            <label for="comment" class="form-label">comment (optional)</label>
+            <textarea
+              name="comment"
+              cols="30"
+              rows="3"
+              class="form-control"
+            ></textarea>
+          </div>
+          <input type="submit" />
+        </form>
+      </div>
+    </main>
   </body>
 </html>

@@ -17,17 +17,19 @@
     </style>
 </head>
 <body>
-    <div class="checkerboard">
+    <main>
+      <div class="checkerboard">
         {% for i in range (row) %} <!--this loop for the horizental line-->
-            {% for j in range (line) %} <!--this loop for the vertical line-->
-                {% if (i + j)%2 ==0 %}
-                    <p class="white-box"></p>
-                {% else %}
-                    <p class="black-box"></p>
-                {% endif %}
-            {% endfor %}
-            <br>
+          {% for j in range (line) %} <!--this loop for the vertical line-->
+            {% if (i + j)%2 ==0 %}
+              <p class="white-box"></p>
+            {% else %}
+              <p class="black-box"></p>
+            {% endif %}
+          {% endfor %}
+          <br>
         {% endfor %}
-    </div>
+      </div>
+  </main>
 </body>
 </html>
