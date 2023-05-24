@@ -24,12 +24,32 @@
         align-items: center;
         padding: 2px;
       }
-      span {
+      .name {
         font-weight: bold;
       }
       .button {
         box-shadow: 3px 3px black;
       }
+      .color2 {
+        color: green
+      }
+      .color1 {
+        color: red
+      }
+      textarea{
+        resize: none;
+      }
+      #div-textarea {
+        -moz-appearance: textfield-multiline;
+        -webkit-appearance: textarea;
+        border: 1px solid gray;
+        font: medium -moz-fixed;
+        font: -webkit-small-control;
+        overflow: auto;
+        padding: 2px;
+        resize: none;
+      }
+
     </style>
   </head>
   <body>
@@ -38,25 +58,25 @@
         <p>Your gold: {{gold}}</p>
         <div class="gold-methods">
           <form action="/process_money" method="post">
-            <p><span>Farm</span></p>
+            <p class="name">Farm</p>
             <p>(earns 10-20 gold)</p>
             <input type="hidden" name="building" value="farm" />
             <input class="button" type="submit" value="find_gold" />
           </form>
           <form action="/process_money" method="post">
-            <p><span>Cave</span></p>
+            <p class="name">Cave</p>
             <p>(earns 5-10 gold)</p>
             <input type="hidden" name="building" value="cave" />
             <input class="button" type="submit" value="find_gold" />
           </form>
           <form action="/process_money" method="post">
-            <p><span>House</span></p>
+            <p class="name">House</p>
             <p>(earns 2-5 gold)</p>
             <input type="hidden" name="building" value="house" />
             <input class="button" type="submit" value="find_gold" />
           </form>
           <form action="/process_money" method="post">
-            <p><span>Casino</span></p>
+            <p class="name">Casino</p>
             <p>(earns/takes 0-50 gold)</p>
             <input type="hidden" name="building" value="casino" />
             <input class="button" type="submit" value="find_gold" />
@@ -64,12 +84,16 @@
         </div>
         <div>
           <p>activites:</p>
-          <textarea
-            name="activites"
-            id="activites"
-            cols="190"
-            rows="10"
-          >{{text}}</textarea>
+          <div id="div-textarea">
+              {% for x in text %}
+                {% if amount >= 0 %}
+                  <span class="color2">{{x}}</span>
+                {% else %}
+                  <span class="color1">{{x}}</span>
+                {% endif %}
+                <br>
+              {% endfor %}
+          </div>
         </div>
       </div>
     </main>

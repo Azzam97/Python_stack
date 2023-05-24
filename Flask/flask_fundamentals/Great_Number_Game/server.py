@@ -4,10 +4,12 @@ import random
 app = Flask(__name__)
 app.secret_key = "not telling you"
 
+
 @app.route('/')
 def make_random():
-    session['number'] = random.randint(1,100)
+    session['number'] = random.randint(1, 100)
     return render_template('index.html')
+
 
 @app.route('/result', methods=['POST'])
 def compare_results():
@@ -21,7 +23,8 @@ def compare_results():
     else:
         text = f"{str(number)} was the correct answer"
         color = "green"
-    return render_template('index.html', text = text, color = color)
+    return render_template('index.html', text=text, color=color)
 
-if __name__ ==('__main__'):
+
+if __name__ == ('__main__'):
     app.run(debug=True)
