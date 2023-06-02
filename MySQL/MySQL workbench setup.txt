@@ -1,0 +1,5 @@
+USE keyword is used to be able to use the database in the query box.
+Select is used to access either the entire table when using the * symbol or just certain columns.
+Insert Into was used to add names to my authors table.
+Update keyword is used to update the different values by specifying the id.
+Delete is used to remove a query from the list.
