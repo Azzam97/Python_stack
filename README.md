@@ -1,6 +1,6 @@
-Hi my name is Azzam Ahmad
+#Hi my name is Azzam Ahmad
 <br>
-I'm an aspiring developer
+##I'm an aspiring developer
 <br>
 I hope to one day work as a game developer
 <br>
