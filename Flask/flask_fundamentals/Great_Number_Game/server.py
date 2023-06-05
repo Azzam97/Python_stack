@@ -8,7 +8,9 @@ app.secret_key = "not telling you"
 @app.route('/')
 def make_random():
     session['number'] = random.randint(1, 100)
+    session['attempts'] = 0
     return render_template('index.html')
+
 
 
 @app.route('/result', methods=['POST'])
@@ -23,7 +25,15 @@ def compare_results():
     else:
         text = f"{str(number)} was the correct answer"
         color = "green"
-    return render_template('index.html', text=text, color=color)
+    if session['attempts'] == 5 and number!= session['number']:
+        return 'YOU LOSE'
+    session['attempts'] += 1
+    return render_template('index.html', text=text, color=color, attempts = session['attempts'])
+
+@app.route('/destroy-session', methods=['POST'])
+def destroy():
+    session.clear()
+    return redirect('/')
 
 
 if __name__ == ('__main__'):

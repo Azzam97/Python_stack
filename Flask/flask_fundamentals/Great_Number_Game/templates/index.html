@@ -4,18 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <title>Great Number Game</title>
     <style>
-          .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      .result{
+        background-color: {{color}};
       }
-         .result {
-          margin-bottom: 50px;
-          border: 2px black solid;
-          background-color: {{color}};
-         }
     </style>
   </head>
   <body>
@@ -36,9 +30,11 @@
             <label for="guess">Your guess</label>
             <input type="number" name="guess" id="guess" />
             <button>Submit</button>
-
-            {{attempts}}
           </form>
+          <form action="/destroy-session" method="post">
+            <button>reset</button>
+          </form>
+          <p>you guessed {{attempts}} times.</p>
         </div>
       </div>
     </main>

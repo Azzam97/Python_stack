@@ -7,8 +7,8 @@ app.secret_key = "it's a secret"
 @app.route('/')
 def visits():
     if 'visits' in session:
-        session['visits'] = int(session.get('visits')) + 1
-        session['users'] = int(session.get('users')) + 1
+        session['visits'] = session['visits'] + 1
+        session['users'] = session['users'] + 1
     else:
         session['visits'] = 1
         session['users'] = 1

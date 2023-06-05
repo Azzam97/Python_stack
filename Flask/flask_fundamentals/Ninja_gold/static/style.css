@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container>p {
+  border: 1px 1px black solid;
+}
+.gold-methods {
+  display: flex;
+  justify-content: space-around;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  border: 1px black solid;
+  align-items: center;
+  padding: 2px;
+}
+.name {
+  font-weight: bold;
+}
+.button {
+  box-shadow: 3px 3px black;
+}
+.color2 {
+  color: green
+}
+.color1 {
+  color: red
+}
+textarea{
+  resize: none;
+}
+#div-textarea {
+  -moz-appearance: textfield-multiline;
+  -webkit-appearance: textarea;
+  border: 1px solid gray;
+  font: medium -moz-fixed;
+  font: -webkit-small-control;
+  overflow: auto;
+  padding: 2px;
+  resize: none;
+}
