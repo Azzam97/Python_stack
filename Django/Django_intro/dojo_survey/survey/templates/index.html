@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <form action="/result" method="post">
+                {% csrf_token %}
+                <div>
+                    <label for="name">Your name: </label>
+                    <input type="text" name="name">
+                </div>
+
+                <div>
+                    <label for="location">Your location: </label>
+                    <select name="location" id="location">
+                        <option value="ramallah">Ramallah</option>
+                        <option value="nablus">Nablus</option>
+                        <option value="hebron">Hebron</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="language">Favourite language: </label>
+                    <select name="language" id="language">
+                        <option value="C#">C#</option>
+                        <option value="PHP">PHP</option>
+                        <option value="C++">C++</option>
+                    </select>
+                </div>
+
+                <div>
+                    <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+                </div>
+
+                <div>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="hobby" id="hobby1" value="anime">
+                    <label for="hobby1">Anime</label>
+                    <input type="checkbox" name="hobby" id="hobby2" value="manga">
+                    <label for="hobby2">Manga</label>
+                    <input type="checkbox" name="hobby" id="hobby3" value="videogames">
+                    <label for="hobby3">videogames</label>
+                </div>
+                <div class="submit">
+                <button class="button">Submit</button>
+                <div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

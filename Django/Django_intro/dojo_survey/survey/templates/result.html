@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1>Submitted info</h1>
+            <p>Name: {{name}}</p>
+            <p>Dojo location: {{location}}</p>
+            <p>Faviourate language: {{language}}</p>
+            <p>Comment: {{comment}}</p>
+            <p>Your Gender: {{gender}}</p>
+            <p>Your hobbies: {{hobby}}</p>
+            <form action="/process" method="post" class="submit">
+                {% csrf_token %}
+                <button class="button">Go Back</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

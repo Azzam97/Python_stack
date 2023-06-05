@@ -1,0 +1,21 @@
+*{
+    margin-top: 5px;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    border: 1px black solid;
+    padding: 5px;
+    background-color: burlywood;
+}
+.submit {
+    text-align: center;
+}
+
+.button {
+    box-shadow: 3px 3px black;
+    background-color: cadetblue;
+}
