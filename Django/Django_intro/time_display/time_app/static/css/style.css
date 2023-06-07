@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.head, main {
+    border: 1px black solid;
+    margin-top: 20px;
+    padding: 5px;
+}
+main {
+    font-size: xx-large;
+}
+.head {
+    font-size: small;
+}

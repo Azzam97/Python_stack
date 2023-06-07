@@ -6,7 +6,6 @@ def form(request):
     return render(request, 'index.html')
 
 def result(request):
-    print('got post info....')
     name = request.POST['name']
     location = request.POST['location']
     language = request.POST['language']
