@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 def form(request):
     return render(request, 'index.html')
 
+
 def result(request):
     name = request.POST['name']
     location = request.POST['location']
@@ -21,6 +22,7 @@ def result(request):
         'hobby': hobby,
     }
     return render(request, 'result.html', context)
+
 
 def go_back(request):
     return redirect('/')

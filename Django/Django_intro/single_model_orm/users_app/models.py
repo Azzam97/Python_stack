@@ -9,5 +9,6 @@ class User(models.Model):
     age = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    
     def __str__(self):
         return f"<User: {self.first_name} {self.last_name}>"
