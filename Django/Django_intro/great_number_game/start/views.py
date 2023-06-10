@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import random
 # Create your views here.
 
@@ -34,3 +34,9 @@ def process(request):
         'attempts': request.session['attempts']
     }
     return render(request, 'index.html', context)
+
+
+def destroy_session(request):
+    del request.session['number']
+    del request.session['attempts']
+    return redirect('/')
