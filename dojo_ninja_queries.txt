@@ -1,0 +1,46 @@
+query1: create 3 objects:
+dojo1 = Dojo.objects.create(name="Kufr'nima", city="Ramallah", state="Ramallah")
+dojo2 = Dojo.objects.create(name="Dura", city="Hebron", state="Hebron")
+dojo3 = Dojo.objects.create(name="Jalama", city="Jenin", state="Jenin")
+
+query2: delete the 3 dojos:
+dojo1.delete()
+dojo2.delete()
+dojo3.delete()
+
+query3: create 3 new dojos:
+dojo4 = Dojo.objects.create(name="hard_boiled", city="Akihabara", state="Tokyo")
+dojo5 = Dojo.objects.create(name="Mugiwara", city="Narita", state="Kanto")
+dojo6 = Dojo.objects.create(name="Shirohige", city="Osaka", state="Osaka")
+
+query4: create 3 ninjas for dojo1:
+ninja1 = Ninja.objects.create(dojo = Dojo.objects.get(id=4), first_name='Azzam', last_name='Ahmad')
+ninja2 = Ninja.objects.create(dojo = Dojo.objects.get(id=4), first_name='Ahmad', last_name='Warda')
+ninja3 = Ninja.objects.create(dojo = Dojo.objects.get(id=4), first_name='Ali', last_name='Kilani')
+
+query5: create 3 ninjas for dojo2:
+ninja4 = Ninja.objects.create(dojo = Dojo.objects.get(id=5), first_name='Andrew', last_name='Tate')
+ninja5 = Ninja.objects.create(dojo = Dojo.objects.get(id=5), first_name='Zoro', last_name='Roronoa')                        
+ninja6 = Ninja.objects.create(dojo = Dojo.objects.get(id=5), first_name='Shigure', last_name='Kira')
+
+query6: create 3 ninjas for dojo3:
+ninja7 = Ninja.objects.create(dojo = Dojo.objects.get(id=6), first_name='Mei', last_name='Raiden')   
+ninja8 = Ninja.objects.create(dojo = Dojo.objects.get(id=6), first_name='Himeko', last_name='Murata')  
+ninja9 = Ninja.objects.create(dojo = Dojo.objects.get(id=6), first_name='Kevin', last_name='Kaslana')  
+
+query7: Retrieve all the ninjas from the first dojo
+ninjas = Ninja.objects.filter(dojo = Dojo.objects.get(id=4))
+print(ninjas)
+
+query8: Retrieve all the ninjas from the last dojo
+ninjas = Ninja.objects.filter(dojo = Dojo.objects.get(id=6))
+print(ninjas)
+
+query9: retrieve the last ninja's dojo:
+dojo = Dojo.objects.get(ninjas = Ninja.objects.get(id=9))    
+print(dojo)
+
+query10: create a new dojo:
+dojo7 = Dojo.objects.create(name='Kazama', city='Washington', state='DC') 
+dojo7.desc = 'Japanaese martial arts'
+dojo7.save()
