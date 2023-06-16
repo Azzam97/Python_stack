@@ -79,7 +79,7 @@
     </div>
     <div class="text-center">
       {% for dojo in dojos %}
-      <p>ninjas at the {{dojo.name}} dojo</p>
+      <p>ninjas at the {{dojo.name}} dojo <a href="/dojo_delete/{{dojo.id}}">delete</a></p>
         {% for ninja in dojo.ninjas.all %}
           <ul>
             <li>{{ninja.first_name}} {{ninja.last_name}}</li>

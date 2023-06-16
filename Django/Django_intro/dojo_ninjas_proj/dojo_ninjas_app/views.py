@@ -23,3 +23,9 @@ def create_ninja(request):
                          dojo = Dojo.objects.get(id=int(request.POST['dojo']))
                         )
     return redirect('/')
+
+
+def delete_dojo(request, id):
+    dojo = Dojo.objects.get(id = id)
+    dojo.delete()
+    return redirect('/')
