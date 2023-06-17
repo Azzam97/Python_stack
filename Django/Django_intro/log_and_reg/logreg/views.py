@@ -32,6 +32,8 @@ def register(request):
 
 
 def success(request):
+    if 'username' not in request.session:
+        return redirect('/')
     context = {
         'username': request.session['username'],
         'status': request.session['status']
