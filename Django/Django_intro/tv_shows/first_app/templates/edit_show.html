@@ -23,15 +23,15 @@
         {% csrf_token %}
         <div>
           <div class="d-flex flex-column">
-            <label for="title" class="mt-1 flex-start">Title</label>
-            <input type="text" name="title" id="title" class="mt-1" />
+            <label for="title" class="mt-1 flex-start">Title:</label>
+            <input type="text" name="title" id="title" class="mt-1" value="{{show.title}}"/>
           </div>
         </div>
 
         <div>
           <div class="d-flex flex-column">
             <label for="network" class="mt-1">Network</label>
-            <input type="text" name="network" id="network" class="mt-1" />
+            <input type="text" name="network" id="network" class="mt-1" vlaue="{{show.network}}"/>
           </div>
           <div>
             <label for="release_date" class="d-flex flex-column"
@@ -43,6 +43,7 @@
               name="release_date"
               id="release_date"
               class="mt-1"
+              value="{{show.release_date}}"
             />
           </div>
         </div>
@@ -54,9 +55,9 @@
               name="desc"
               id="desc"
               cols="30"
-              rows="1"
+              rows="2"
               class="mt-1"
-            ></textarea>
+            >{{show.desc}}</textarea>
           </div>
         </div>
 
